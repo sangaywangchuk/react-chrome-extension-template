@@ -35,7 +35,7 @@ module.exports = {
       patterns: [
         {
           from: path.resolve('src/public'),
-          to: path.resolve('dist')
+          to: path.resolve('build')
         }
       ]
     }),
@@ -46,7 +46,7 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'build')
   },
   optimization: {
     splitChunks: {
