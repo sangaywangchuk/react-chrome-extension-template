@@ -1,7 +1,8 @@
 import React from "react"
+import '../styles/tailwind.css'
 
 const OptionsPage = () => {
-  return <div>
+  return <div className=" bg-slate-500">
     This is Option Page
   </div>
 }
