@@ -1,7 +1,9 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import './popup.css'
-const test = <img src="icon.png" />;
-const root = document.createElement('div');
+import { createRoot } from 'react-dom/client'
+import PopupPage from '../components/popupPage'
+
+const root = document.createElement('div')
 document.body.appendChild(root)
-ReactDOM.render(test, root)
+
+const rootElement = createRoot(root)
+rootElement.render(<PopupPage />)

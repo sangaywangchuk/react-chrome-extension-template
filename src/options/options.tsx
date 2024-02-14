@@ -1,7 +1,11 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { createRoot } from 'react-dom/client'
+import OptionsPage from '../components/optionsPage'
 
-const test = <p>Hello World</p>
+// Create a root div element
 const root = document.createElement('div')
 document.body.appendChild(root)
-ReactDOM.render(test, root)
+
+// Use createRoot to render the JSX element into the root element
+const rootElement = createRoot(root)
+rootElement.render(<OptionsPage />)
