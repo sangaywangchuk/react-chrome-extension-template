@@ -13,7 +13,7 @@
 
 # Production Build
 
-1. `npm run build` to generate a minimized production build in the `build` folder
+1. `yarn run build` to generate a minimized production build in the `build` folder
 2. ZIP the entire `build` folder (e.g. `build.zip`)
 3. Publish the ZIP file on the Chrome Web Store Developer Dashboard!
 
