@@ -10,7 +10,7 @@ module.exports = {
     popup: path.resolve('src/popup/popup.tsx'),
     options: path.resolve('src/options/options.tsx'),
     background: path.resolve('src/background/background.ts'),
-    contentScript: path.resolve('src/contentScript/contentScript.ts')
+    contentScript: path.resolve('src/contentScript/contentScript.tsx')
   },
   module: {
     rules: [
@@ -22,12 +22,12 @@ module.exports = {
       {
         use: ['style-loader', 'css-loader', {
           loader: 'postcss-loader',
-          // options: {
-          //   postcssOptions: {
-          //     indent: "postcss",
-          //     plugins: [tailwindcss, autoprefixer]
-          //   }
-          // }
+          options: {
+            postcssOptions: {
+              indent: "postcss",
+              plugins: [tailwindcss, autoprefixer]
+            }
+          }
         }],
         test: /\.css$/i
       },
@@ -49,7 +49,7 @@ module.exports = {
         }
       ]
     }),
-    ...getHtmlPlugins(['popup', 'options'])
+    ...getHtmlPlugins(['popup', 'options', 'contentScript'])
   ],
   resolve: {
     extensions: ['.tsx', '.ts', '.js']
@@ -60,7 +60,9 @@ module.exports = {
   },
   optimization: {
     splitChunks: {
-      chunks: 'all'
+      chunks(chunk) {
+        return chunk.name !== 'contentScript'
+      },
     }
   }
 }
