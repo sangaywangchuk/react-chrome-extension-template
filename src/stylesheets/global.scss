@@ -3,3 +3,9 @@
 @tailwind utilities;
 @import 'variables';
 @import 'overwrite';
+
+@layer components {
+  .btn {
+    @apply bg-success text-primary-600
+  }
+}

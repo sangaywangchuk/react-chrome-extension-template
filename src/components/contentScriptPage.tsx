@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import '../styles/tailwind.css'
+import '../stylesheets/global.scss'
 
 const ContentPage = () => {
 	const [images, setImages] = useState([])
@@ -34,7 +34,7 @@ const ContentPage = () => {
 	}, [])
 
 	return (
-		<div className="text-5xl bg-green-500 ">
+		<div className="text-5xl bg-primary-800 ">
 			this this content page
 		</div>
 	)
