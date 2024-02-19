@@ -1,10 +1,14 @@
 import React from "react"
-import '../styles/tailwind.css'
+import '../stylesheets/global.scss'
 
 const OptionsPage = () => {
-  return <div className=" bg-slate-500">
-    This is Option Page
-  </div>
+  return (
+    <div className=" bg-secondary-500">
+      <p>
+        This is Option Page
+      </p>
+    </div>
+  )
 }
 
 export default OptionsPage
