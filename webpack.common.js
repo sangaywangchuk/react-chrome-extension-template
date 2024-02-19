@@ -32,7 +32,7 @@ module.exports = {
         test: /\.scss$/i
       },
       {
-        type: 'asset/resource',
+        type: 'styles/stylesheets',
         test: /\.(jpg|jpeg|png|woff|woff2|eot|ttf|svg)$/,
       }
     ]

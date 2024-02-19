@@ -1,0 +1,67 @@
+@import "tailwindcss/base";
+ 
+@layer base {
+  body {
+    -webkit-tap-highlight-color: transparent;
+    @apply min-h-screen font-aventa text-[14px] tracking-[0.15px] text-black/[.87];
+  }
+ 
+  @font-face {
+    font-family: Aventa_Regular;
+    src: url("../fonts/aventa-regular.otf");
+    font-display: swap;
+  }
+ 
+  @font-face {
+    font-family: Aventa_Bold;
+    src: url("./fonts/aventa-bold.otf");
+    font-display: swap;
+  }
+ 
+  @font-face {
+    font-family: Aventa_Medium;
+    src: url("./fonts/aventa-medium.otf");
+    font-display: swap;
+  }
+  h1 {
+    @apply font-aventa_bold text-[40px] leading-[42.5px] sm:text-[56px] sm:leading-[80px];
+  }
+ 
+  h2 {
+    @apply font-aventa_bold text-[32px] leading-[40px] sm:text-[48px]  sm:leading-[60px];
+  }
+ 
+  h3 {
+    @apply font-aventa_bold text-[24px] leading-[33.6px] sm:text-[40px] sm:leading-[42.5px];
+  }
+ 
+  h4 {
+    @apply font-aventa_bold text-[20px] leading-[22.5px] sm:text-[32px] sm:leading-[36.4px];
+  }
+ 
+  h5 {
+    @apply font-aventa_bold text-[18px] leading-[22.5px] sm:text-[24px] sm:leading-[33.6px];
+  }
+ 
+  h6 {
+    @apply font-aventa_bold text-[16px] leading-[25px] sm:text-[20px];
+  }
+}
+ 
+@layer components {
+  .btn {
+    @apply px-[32px] py-[10px] rounded-[8px];
+    &-primary {
+      @apply bg-primary-700 hover:bg-primary-800 text-white;
+    }
+    &-primary--outlined {
+      @apply bg-transparent hover:bg-primary-200 text-primary-700 border border-primary-700;
+    }
+    &-danger--outlined {
+      @apply bg-white text-danger border border-danger;
+    }
+    &-neutral--outlined {
+      @apply bg-transparent text-black/[0.6] border border-neutral-50 px-[16px];
+    }
+  }
+}

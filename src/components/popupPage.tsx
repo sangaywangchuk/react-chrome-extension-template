@@ -29,10 +29,10 @@ const PopupPage = () => {
 
 	return (
 		<div className="w-52 h-52">
-			<button className="btn"> hello</button>
-			{imageUrls?.map((image) => (
+			<button className="btn btn-primary"> hello</button>
+			{imageUrls?.map((image, index) => (
 				<div
-					key={image}
+					key={index}
 					className="border border-indigo-600 flex justify-evenly mb-3 bg-white"
 				>
 					<div className=" w-20">

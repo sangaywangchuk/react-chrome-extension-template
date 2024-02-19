@@ -4,8 +4,56 @@
 @import 'variables';
 @import 'overwrite';
 
+
+@layer base {
+  body {
+    -webkit-tap-highlight-color: transparent;
+    @apply min-h-screen text-[14px] tracking-[0.15px] text-black/[.87];
+  }
+
+  h1 {
+    @apply text-[40px] leading-[42.5px] sm:text-[56px] sm:leading-[80px];
+  }
+
+  h2 {
+    @apply text-[32px] leading-[40px] sm:text-[48px] sm:leading-[60px];
+  }
+
+  h3 {
+    @apply text-[24px] leading-[33.6px] sm:text-[40px] sm:leading-[42.5px];
+  }
+
+  h4 {
+    @apply text-[20px] leading-[22.5px] sm:text-[32px] sm:leading-[36.4px];
+  }
+
+  h5 {
+    @apply text-[18px] leading-[22.5px] sm:text-[24px] sm:leading-[33.6px];
+  }
+
+  h6 {
+    @apply text-[16px] leading-[25px] sm:text-[20px];
+  }
+}
+
 @layer components {
   .btn {
-    @apply bg-success text-primary-600
+    @apply px-[32px] py-[10px] rounded-[8px];
+
+    &-primary {
+      @apply bg-primary-700 hover:bg-primary-800 text-white;
+    }
+
+    &-primary--outlined {
+      @apply bg-transparent hover:bg-primary-200 text-primary-700 border border-primary-700;
+    }
+
+    &-danger--outlined {
+      @apply bg-white border;
+    }
+
+    &-neutral--outlined {
+      @apply bg-transparent text-black/[0.6] border border-neutral-50 px-[16px];
+    }
   }
 }
